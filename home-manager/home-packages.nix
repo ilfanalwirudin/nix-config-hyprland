@@ -6,14 +6,16 @@
 
     # Desktop apps
     anki
-    imv
-    mpv
-    obs-studio
+#    imv
+#    mpv
+    vlc
+#    obs-studio
     obsidian
     pavucontrol
     teams-for-linux
     telegram-desktop
-    vesktop
+#    vesktop
+    discord
 
     # CLI utils
     bc
