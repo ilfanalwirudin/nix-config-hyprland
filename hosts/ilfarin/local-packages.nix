@@ -1,4 +1,9 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, config, ... }: {
+
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
   environment.systemPackages = with pkgs; [
     gcc
     git
@@ -11,5 +16,15 @@
     # qemu
     # quickemu
     libsForQt5.dolphin
+    github-desktop
+    cloudflare-warp
+    cloudflared
   ];
+
+ 
+  #Enable Cloudflare warp cli B
+
+  systemd.packages = [ pkgs.cloudflare-warp ]; # for warp-cli
+  systemd.targets.multi-user.wants = [ "warp-svc.service" ]; # causes warp-svc to be started automatically
+
 }

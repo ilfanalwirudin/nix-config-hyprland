@@ -14,5 +14,7 @@
     ./timezone.nix
     ./user.nix
     ./zram.nix
+   # ./warp.nix
+   # ./unfree.nix
   ];
 }
